@@ -30,7 +30,7 @@ server.post('/', (req, res)=>{
 
                 const getItemsAsync= async (name)=>
                   {
-                      let response = await fetch(encodeURI(`http://20093dca.ngrok.io/api/ospos_items/findone?_where=(name,eq,${name})`));
+                      let response = await fetch(encodeURI(`https://20093dca.ngrok.io/api/ospos_items/findone?_where=(name,eq,${name})`));
                       let data = await response.json();
                       let finalPrice = data[0].unit_price;
                       return finalPrice;
